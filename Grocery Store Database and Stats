@@ -1,0 +1,17 @@
+// create grocery store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, aisle INTEGER, sales INTEGER);
+
+INSERT INTO clothing VALUES (1,"Accsesories", 4.95, 3, 5);
+INSERT INTO clothing VALUES (2,"Jeans", 23.99, 6, 2);
+INSERT INTO clothing VALUES (3,"Cardigans", 14.87, 4, 8);
+INSERT INTO clothing VALUES (4,"Blouses", 36.99, 5, 4);
+INSERT INTO clothing VALUES (5,"Shoes", 45.99, 8, 3);
+
+//display database by price
+
+SELECT * FROM clothing ORDER BY price;
+
+//total cash sales of each item listed by price
+
+SELECT name, (price*sales) FROM clothing GROUP BY price;
